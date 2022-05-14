@@ -1,0 +1,56 @@
+<html>
+
+<head>
+  <title>Music Player By Indal Singh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="offline">You Are Offline Now</div>
+  <div id="online">Back To online</div>
+<div id="ronline_box">
+  <div class="online-box">
+    <span class="conn-msg">Internet Connection Required</span><br>
+    <span id="okbtn">OK</span>
+  </div>
+</div>
+  <div class="dl_music_player">
+    <div class="dl-plyer-box">
+      <p><img alt="Rama Devara Ho Papi Pike Ghare Aawela Frooti" id="dlalimg"
+          src="https://simusic.in/siteuploads/thumb/c/1177.jpg" title="Rama Devara Ho Papi Pike Ghare Aawela Frooti"
+          loading="lazy" />
+      <div id="dl_song_del">
+        <p>
+          <marquee scrollamount="4" id="s_title">Note Barsela Tohara Nathuniya Par Jab Hilawelu Kamar Harmuniya Par.Mp3</marquee>
+        </p>
+        <p id="s_artists">Khesari Lal Yadav, Priyanka Singh</p>
+      </div>
+      </p>
+      <audio src="https://simusic.in/embed/1423" id="audio"></audio>
+      <div class="time">
+        <time id="time-current" datetime="0m 0s">
+          00:00</time>
+        <span> / </span>
+        <time id="duration" datetime="0m 0s">00:00</time>
+      </div>
+      <div class="audio-progress">
+        <progress id="progress-bar" value="0" min="0"></progress>
+        <input class="seek" id="seek" value="0" min="0" type="range" step="1">
+        <!-- <div class="seek-tooltip" id="seek-tooltip">00:00</div> -->
+      </div>
+      <div class="dl-player-controls">
+        <span id="preTrack"><img src="images/previousTrack.svg" alt="Previous" title="Previous"></span>
+        <span id="master_play"><img src="images/play-solid.svg" alt="Play" title="Play (K)"></span>
+        <span id="master_pause"><img src="images/pause-solid.svg" alt="Pause" title="Pause (K)"></span>
+        <span id="master_loader"><img src="images/loader.gif" alt="Loader" title="Loader"></span>
+        <span id="nextTrack"><img src="images/nextTrack.svg" alt="Next" title="Next"></span>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<script src="js/main.js"></script>
+</html>

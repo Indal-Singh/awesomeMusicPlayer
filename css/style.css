@@ -1,0 +1,266 @@
+ *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  }
+  
+  body
+  {
+	display:flex;
+	width:100%;
+	height:100%;
+	justify-content:center;
+	align-items:center;
+  }
+  
+  .dl_music_player {
+  width:100%;
+  height:auto;
+  display:flex;
+  justify-content:center;
+  
+  }
+
+	.dl_music_player .dl-plyer-box
+	{
+	overflow:hidden; 
+	width:300px;
+	height:370px;
+	border:1px solid #ccc;
+	border-radius:5px;
+	background:#ddd;
+	box-shadow: 0px 1px 5px 2px #ccc;
+	}
+	
+	.dl_music_player .dl-plyer-box #dlalimg
+	{
+		position:relative;
+		top:0;
+		left:0;
+		width:100%;
+		
+	}
+	
+	.dl_music_player .dl-player-controls
+	{
+		width:100%;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		padding:5px;
+		position:relative;
+		top:-47px;
+		left:0;
+		z-index:100;
+		
+	}
+	.dl-player-controls img{
+		width:25px;
+		margin:0 5px;
+		cursor:pointer;
+		transition:1s;
+		filter: brightness(150%);
+	}
+	
+	.dl-player-controls #preTrack, #nextTrack
+	{
+		width:15px;
+	}
+
+	.dl-player-controls #preTrack
+	{
+		margin-right: 20px;
+	}
+
+	.dl-player-controls #master_pause{
+		display:none;
+	}
+	
+	.dl-player-controls #master_loader
+	{
+		display: none;
+	}
+
+	img:hover{
+		filter: brightness(120%);
+	}
+	
+	.dl-plyer-box #dl_song_del
+	{
+		position:relative;
+		bottom:50px;
+		left:0px;
+		color:#fff;
+		z-index:5px;
+		height:38px;
+		margin:4px;
+		overflow:hidden;
+	}
+	
+	
+	#dl_song_del #s_artists
+	{
+		clear: both;
+		display: inline-block;
+		overflow: hidden;
+		white-space: nowrap;
+		background: -webkit-linear-gradient(rgb(179, 19, 27), rgb(182, 89, 12));
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		display: flex;
+		justify-content: center;
+	}
+
+
+	
+	#dl_song_del #s_title
+	{
+		color:rgb(255, 38, 0);
+	}
+
+	.audio-progress
+	{
+		width: 100%;
+		position: relative;
+		top: -65px;
+		left: 0;
+		margin: 0;
+	}
+
+	.audio-progress progress
+	{
+		position: absolute;
+		width: 100%;
+		appearance: none;
+		-webkit-appearance: none;
+		height: 1px;
+	}
+
+	.audio-progress progress::-webkit-progress-bar
+	{
+		background: rgb(153, 151, 151);
+		border-radius: 2px;
+	}
+
+	.audio-progress progress::-webkit-progress-value 
+	{
+		background: red;
+		border-radius: 2px;
+	}
+
+	.audio-progress #seek
+	{
+		position: relative;
+		width: 100%;
+		height: 1px;
+		cursor: pointer;
+		-webkit-appearance: none;
+ 		appearance: none;
+		 background:transparent;
+	}
+
+	.audio-progress #seek::-webkit-slider-thumb {
+		height: 4px;
+		width: 4px;
+		border-radius: 4px;
+		background: red;
+		cursor: pointer;
+		-webkit-appearance: none;
+		margin-left: -1px;
+		margin-right: -10px;
+		box-shadow: 0px 00px 5px 1px #da3333;
+	  }
+
+	  .dl-plyer-box .time
+	  {
+		position: relative;
+		top: -46px;
+		right: -210px;
+	  }
+
+	  #ronline_box
+	  {
+		display: none;
+		position: fixed; 
+		z-index: 100; 
+		left: 0;
+		top: 0;
+		width: 100%; 
+		height: 100%;
+		overflow: auto; 
+		background-color: rgb(0,0,0); 
+		background-color: rgba(0,0,0,0.4); 
+		animation-name: animatetop;
+		animation-duration: 0.8s;
+		animation-timing-function: ease-in-out;
+	  }
+
+	  #ronline_box .online-box
+	  {
+		background-color: #fefefe;
+		margin: 20% auto; 
+		padding: 20px;
+		border: 1px solid #888;
+		width: 60%; 
+		height:20%;
+		box-shadow: 0px 1px 2px 0px rgb(85, 84, 84);
+		text-align: center;
+		border-radius: 5px;
+		
+	  }
+
+	  #ronline_box .online-box .conn-msg
+	  {
+		  font-size: 20px;
+		  color: #e44141;
+	  }
+	  #ronline_box .online-box #okbtn
+	  {
+		  padding: 5px 10px;
+		  background-color: rgb(46, 150, 46);
+		  color: #fff;
+		  position: relative;
+		  top:25px;
+		  cursor: pointer;
+		  border-radius: 2px;
+	  }
+
+	  #online
+	  {
+		  text-align: center;
+		  padding: 4px;
+		  background: rgb(26, 156, 26);
+		  color: #fff;
+		  width: 100%;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  display: none;
+		  animation-name: animatetop;
+		  animation-duration: 0.4s;
+		  animation-timing-function: ease-in-out;
+		  
+	  }
+	  #offline
+	  {
+		text-align: center;
+		padding: 4px;
+		background: rgb(184, 14, 14);
+		color: #fff;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+		animation-name: animatetop;
+		animation-duration: 0.8s;
+		animation-timing-function: ease-in-out;
+	  }
+
+	  @keyframes animatetop {
+		from {top: -300px; opacity: 0}
+		to {top: 0; opacity: 1}
+	  }
+
+
